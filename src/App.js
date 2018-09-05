@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 
+import Aux from './hoc/Aux';
+import Stock from './containers/Stock/Stock';
+import Cart from './containers/Cart/Cart';
+
 class App extends Component {
   render() {
     return (
-      <div>
-        
-      </div>
+      <Aux>
+        <main>
+          <Stock />
+        </main>
+        <Cart />
+      </Aux>
     );
   }
 }
