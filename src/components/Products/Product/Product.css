@@ -4,15 +4,6 @@
   padding: .5rem;
 }
 
-.ProductThumb {
-  text-align: center;
-}
-
-.ProductThumb img {
-  width: 100%;
-  max-width: 500px;
-}
-
 .ProductTitle {
   text-align: center;
   margin-top: 1rem;

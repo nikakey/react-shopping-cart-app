@@ -1,7 +1,9 @@
 import React from 'react';
 
+import classes from './ProductImage.css';
+
 const productImage = (props) => (
-  <div className={props.classes}>
+  <div className={classes[props.imgType]}>
     <img src={props.src} alt={props.alt} />
   </div>
 );
