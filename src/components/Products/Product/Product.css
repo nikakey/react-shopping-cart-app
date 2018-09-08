@@ -1,0 +1,41 @@
+.ProductContainer {
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+.ProductThumb {
+  text-align: center;
+}
+
+.ProductThumb img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.ProductTitle {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: .75rem;
+}
+
+.ProductTitle h2 {
+  font-size: 1.15rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.ProductPrice {
+  text-align: center;
+  margin-top: .75rem;
+  margin-bottom: 1rem;
+}
+
+.ProductPrice p {
+  font-size: .75rem;
+}
+
+.ProductPrice span {
+  font-size: 1.5rem;
+  margin-left: .15rem;
+}

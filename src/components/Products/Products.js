@@ -28,7 +28,7 @@ class Products extends Component {
     
     if (this.state.products) {
       products = Object.keys(this.state.products).map(prodKey => {
-        return <Product title={this.state.products[prodKey].title} key={prodKey} />
+        return <Product title={this.state.products[prodKey].title} price={this.state.products[prodKey].price} key={prodKey} src={require(`../../assets/products-stock/${this.state.products[prodKey].sku}_1.jpg`)} alt={this.state.products[prodKey].title} />
       });
     }
       
