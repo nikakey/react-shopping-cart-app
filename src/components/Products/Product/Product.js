@@ -2,6 +2,7 @@ import React from 'react';
 
 import ProductImage from './ProductImage/ProductImage';
 import classes from './Product.css';
+import Button from '../../UI/Buttons/Button';
 
 const product = (props) => {
   return (
@@ -14,6 +15,7 @@ const product = (props) => {
       <div className={classes.ProductPrice}>
         <p>CA$ <span>{props.price}</span></p>
       </div>
+      <Button btnType="BtnProduct">Add to Cart</Button>
     </div>
   );
 };
