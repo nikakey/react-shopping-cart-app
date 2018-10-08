@@ -2,7 +2,7 @@ import React from 'react';
 
 import ProductImage from './ProductImage/ProductImage';
 import classes from './Product.css';
-import Button from '../../UI/Buttons/Button';
+import Button from '../../UI/Button/Button';
 
 const product = (props) => {
   return (

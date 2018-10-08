@@ -11,3 +11,7 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+
+.BtnProduct:hover {
+  background-color: #CE786A;
+}
