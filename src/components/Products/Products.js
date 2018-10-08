@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Product from './Product/Product';
 import Spinner from '../UI/Spinner/Spinner';
+import classes from './Products.css';
 
 class Products extends Component {
 
@@ -33,7 +34,7 @@ class Products extends Component {
     }
       
     return (
-      <div>
+      <div className={classes.ProductsContainer}>
         {products}
       </div>
     );

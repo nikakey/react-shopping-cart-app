@@ -39,3 +39,21 @@
   font-size: 1.5rem;
   margin-left: .15rem;
 }
+
+@media only screen and (min-width: 600px) {
+  .ProductContainer {
+    width: 47%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .ProductContainer {
+    width: 23%;
+  }
+  .ProductPrice p {
+    font-size: 1rem;
+  }
+  .ProductPrice span {
+    font-size: 1.75rem;
+  }
+}
