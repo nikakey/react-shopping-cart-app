@@ -22,12 +22,6 @@
   display: block;
 }
 
-@media only screen and (min-width: 1024px) {
-  .BtnVisibility {
-    display: none;
-  }
-}
-
 .BtnProductDrawer {
   background-color: #FFFFFF;
   border: none;
@@ -47,4 +41,10 @@
 .BtnProductDrawer:hover {
   background-color: #CE786A;
   color: #FFFFFF;
+}
+
+@media only screen and (min-width: 1024px) {
+  .BtnVisibility {
+    display: none;
+  }
 }

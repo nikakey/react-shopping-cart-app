@@ -1,0 +1,10 @@
+.StockContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1024px) {
+  .StockContainer {
+    flex-direction: row;
+  }
+}

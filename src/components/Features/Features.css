@@ -1,0 +1,12 @@
+.FeaturesContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .FeaturesContainer {
+    width: 15%;
+  }
+}
