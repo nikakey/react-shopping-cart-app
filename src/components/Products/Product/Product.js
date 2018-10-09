@@ -3,6 +3,7 @@ import React from 'react';
 import ProductImage from './ProductImage/ProductImage';
 import classes from './Product.css';
 import Button from '../../UI/Button/Button';
+import Drawer from '../../UI/Drawer/Drawer';
 
 const product = (props) => {
   return (

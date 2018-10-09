@@ -1,0 +1,22 @@
+.Drawer {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .Drawer {
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .5);
+    transition: transform .3s ease-out;
+  }
+  
+  .OpenedDrawer {
+    transform: translateY(0);
+  }
+  
+  .ClosedDrawer {
+    transform: translateY(-100%);
+  }
+}
