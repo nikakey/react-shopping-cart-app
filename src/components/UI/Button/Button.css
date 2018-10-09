@@ -10,6 +10,8 @@
   border-radius: 3px;
   font-weight: bold;
   text-transform: uppercase;
+  display: block;
+  transition: .2s ease-in-out;
 }
 
 .BtnProduct:hover {
@@ -24,4 +26,25 @@
   .BtnVisibility {
     display: none;
   }
+}
+
+.BtnProductDrawer {
+  background-color: #FFFFFF;
+  border: none;
+  color: #292622;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  transition: .2s ease-in-out;
+}
+
+.BtnProductDrawer:hover {
+  background-color: #CE786A;
+  color: #FFFFFF;
 }
