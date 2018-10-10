@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 import ProductImage from './ProductImage/ProductImage';
 import classes from './Product.css';
@@ -36,5 +37,12 @@ class Product extends Component {
     );
   }
 }
+
+Product.PropTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  title: PropTypes.string,
+  price: PropTypes.number
+};
 
 export default Product;
