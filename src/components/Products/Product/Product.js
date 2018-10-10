@@ -39,10 +39,10 @@ class Product extends Component {
 }
 
 Product.PropTypes = {
-  src: PropTypes.string,
-  alt: PropTypes.string,
-  title: PropTypes.string,
-  price: PropTypes.number
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired
 };
 
 export default Product;
