@@ -38,7 +38,7 @@ class Product extends Component {
   }
 }
 
-Product.PropTypes = {
+Product.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
