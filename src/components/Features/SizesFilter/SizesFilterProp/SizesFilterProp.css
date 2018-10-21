@@ -1,0 +1,72 @@
+.SizesFilterProp {
+  margin: 1rem 0;
+}
+
+.SizesFilterProp label {
+  position: relative;
+  padding-left: 2.25rem;
+  padding-top: 2px;
+  cursor: pointer;
+  font-size: 1rem;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.SizesFilterProp input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.Checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #eee;
+  border: 2px solid #eee;
+  transition: .2s ease-in-out;
+}
+
+/* On mouse-over, add border */
+
+.SizesFilterProp label:hover input ~ .Checkmark {
+  border: 2px solid #292622;
+}
+
+/* When the checkbox is checked, add background */
+
+.SizesFilterProp input:checked ~ .Checkmark {
+  background-color: #292622;
+  border-color: #292622;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.Checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+
+.SizesFilterProp input:checked ~ .Checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.Checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
