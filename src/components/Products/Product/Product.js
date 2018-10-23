@@ -24,13 +24,14 @@ class Product extends Component {
     return (
         <div className={classes.ProductContainer} onMouseEnter={this.openProductDrawerHandler} onMouseLeave={this.closeProductDrawerHandler}>
           <Drawer open={this.state.showProductDrawer} />
-          <ProductImage imgType="ProductThumb" src={this.props.src} alt={this.props.alt} />
+          <ProductImage imgType="ProductThumb" src={require(`../../../assets/products-stock/${this.props.data.sku}_1.jpg`)} alt={this.props.data.model.title} />
           <div className={classes.ProductTitle}>
-            <h2>{this.props.title}</h2>
+            <h2>{this.props.data.model.title}</h2>
+            <h2>{this.props.data.color}</h2>
             <hr />
           </div>
           <div className={classes.ProductPrice}>
-            <p>CA$ <span>{this.props.price}</span></p>
+            <p>CA$ <span>{this.props.data.price}</span></p>
           </div>
           <Button btnType="BtnProduct" btnVisibility="BtnVisibility">Add to Cart</Button>
         </div>
@@ -39,10 +40,7 @@ class Product extends Component {
 }
 
 Product.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired
+  data: PropTypes.object.isRequired
 };
 
 export default Product;

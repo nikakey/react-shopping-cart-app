@@ -4,6 +4,7 @@ import classes from './SizesFilter.css';
 import SizesFilterProp from './SizesFilterProp/SizesFilterProp';
 
 const sizes = [
+  '4',
   '6',
   '6.5',
   '7',

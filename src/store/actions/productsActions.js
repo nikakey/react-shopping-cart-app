@@ -16,14 +16,34 @@ export const fetchProductsFailed = () => {
   };
 };
 
+const getProducts = () => {
+  return axios.get('/products.json');
+}
+
+const getModels = () => {
+  return axios.get('/models.json');
+}
+
+const joinTables = (models, products) => {
+  let res = {}
+  for (let key in products)
+  {
+    res[key] = {
+      price: products[key].price,
+      sku: products[key].sku,
+      color: products[key].color,
+      model: models[products[key].model_id]
+    }
+  }
+  return res;
+}
+
 export const fetchProducts = () => {
   return dispatch => {
-    axios.get('https://react-shopping-cart-app.firebaseio.com/products.json')
-      .then(response => {
-        dispatch(setProducts(response.data));
-      })
-      .catch(error => {
-        dispatch(fetchProductsFailed());
-      });
+    Promise.all([getModels(), getProducts()])
+      .then(results => {
+        const data = joinTables(results[0].data, results[1].data);
+        dispatch(setProducts(data));
+    });
   };
 };
