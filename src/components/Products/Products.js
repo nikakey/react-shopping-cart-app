@@ -14,7 +14,16 @@ class Products extends Component {
 
   componentDidMount () {
     console.log("didm");
-    this.props.onFetchProducts();
+    this.props.onFetchProducts(this.props.filters);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { filters: nextFilters } = nextProps;
+
+    if ( nextFilters !== this.props.filters ) {
+      this.props.onFetchProducts(nextFilters);
+    }
+
   }
 
   render () {
@@ -38,13 +47,14 @@ class Products extends Component {
 const mapStateToProps = state => {
   return {
     products: state.products.products,
-    error: state.products.error
+    error: state.products.error,
+    filters: state.filters.filters
   };
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    onFetchProducts: () => dispatch(productsActions.fetchProducts())
+    onFetchProducts: (filters) => dispatch(productsActions.fetchProducts(filters))
   };
 }
 

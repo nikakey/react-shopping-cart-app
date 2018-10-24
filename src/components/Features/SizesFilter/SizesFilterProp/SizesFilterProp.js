@@ -12,6 +12,7 @@ class SizesFilterProp extends Component {
     this.setState((prevState) => {
       return {isChecked: !prevState.isChecked};
     });
+    this.props.toggleCheckboxChange(this.props.label);
   }
 
   render () {

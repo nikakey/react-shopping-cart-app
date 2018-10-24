@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
 
 import classes from './SizesFilter.css';
 import SizesFilterProp from './SizesFilterProp/SizesFilterProp';
+import * as filtersActions from '../../../store/actions';
 
 const sizes = [
   '4',
@@ -20,6 +22,19 @@ const sizes = [
 
 class SizesFilter extends Component {
 
+  componentWillMount () {
+    this.selectedCheckboxes = new Set();
+  }
+
+  toggleCheckboxChangeHandler = (label) => {
+    if (this.selectedCheckboxes.has(label)) {
+      this.selectedCheckboxes.delete(label);
+    } else {
+      this.selectedCheckboxes.add(label);
+    }
+    this.props.onFiltersUpdate(Array.from(this.selectedCheckboxes));
+  }
+
   render () {
     return (
       <div className={classes.SizesFilterContainer}>
@@ -29,6 +44,7 @@ class SizesFilter extends Component {
             <SizesFilterProp
               label={size}
               key={size}
+              toggleCheckboxChange={this.toggleCheckboxChangeHandler}
             />
           ))}
         </div>
@@ -37,4 +53,16 @@ class SizesFilter extends Component {
   }
 }
 
-export default SizesFilter;
+const mapStateToProps = state => {
+  return {
+    filters: state.filters.filters
+  };
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onFiltersUpdate: (filters) => dispatch(filtersActions.updateFilters(filters))
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SizesFilter);
